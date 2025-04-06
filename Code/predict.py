@@ -23,7 +23,6 @@ sample_data = {
 
 # Note that the above data still has to undergo reshaping for LSTM input
 # This is done in the function below
-
 def predict(client):
     client = pd.DataFrame(client, index = [0])
 
