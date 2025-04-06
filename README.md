@@ -3,6 +3,6 @@ A supervised machine learning project for NUS IT1244. Done by [Cheong Zhi Kai Li
 
 # How to run the project:
 
-A script has been created to test the best model, [`predict.py`](). You may run the program yourself. If you wish to test values other than the given, kindly make a copy of the dictionary found in the program.
+A script has been created to test the best model, [`predict.py`](https://github.com/fuyu-myk/fraud-detection/blob/main/Code/predict.py). You may run the program yourself. If you wish to test values other than the given, kindly make a copy of the dictionary found in the program.
 
-Kindly also note that the code was written on Google's Colaboratory environment, it is advised to run the code there. Regardless, all the required libraries can be found in [`requirements.txt`]().
+Kindly also note that the code was written on Google's Colaboratory environment, it is advised to run the code there. Regardless, all the required libraries can be found in [`requirements.txt`](https://github.com/fuyu-myk/fraud-detection/blob/main/Code/requirements.txt).
