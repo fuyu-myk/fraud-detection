@@ -44,7 +44,6 @@ def predict(client):
     # Finding max seq length for padding
     max_seq_length = 30
 
-
     # Porting dict values to lists
     X_sequences = []
     y_labels = []
@@ -52,7 +51,6 @@ def predict(client):
     for client_id in client_sequences:
         X_sequences.append(client_sequences[client_id])
         y_labels.append(client_labels[client_id])
-
 
     # Padding all shorter sequences using the max length
     X_padded = pad_sequences(X_sequences, maxlen = max_seq_length, dtype = 'float32', padding = 'post', truncating = 'post')
@@ -69,7 +67,6 @@ def predict(client):
     # Flatten
     X_padded_flat = X_padded.reshape(-1, num_features)
 
-
     scaler = StandardScaler()
     X_padded_flat_scaled = scaler.fit_transform(X_padded_flat)
 
@@ -80,11 +77,8 @@ def predict(client):
 
 
     # Predictions using LSTM model
-    y_labels = np.array(y_labels).reshape(-1, 1)
     prediction = model.predict(X_padded_scaled)
-
     prediction_output = "client is fraudulent" if prediction[0][0] > 0.5 else "client is legitimate"
-
     return prediction_output
 
 predict(sample_data)
